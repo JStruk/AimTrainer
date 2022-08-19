@@ -2033,8 +2033,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverPanel: {fileID: 1240156971}
-  score: {fileID: 1285027714}
-  time: {fileID: 460497659}
+  scoreText: {fileID: 1285027714}
+  timeText: {fileID: 460497659}
 --- !u!4 &1512376052
 Transform:
   m_ObjectHideFlags: 0

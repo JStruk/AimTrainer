@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class Statistics : MonoBehaviour
 {
-    public static int scoreInt;
+    public static int score;
     public static float timer;
 
     public GameObject gameOverPanel;
-    public TMP_Text score, time;
+    public TMP_Text scoreText, timeText;
 
 
     // Start is called before the first frame update
@@ -25,8 +25,8 @@ public class Statistics : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        score.text = "Score: " + scoreInt;
-        time.text = "Time: " + timer;
+        scoreText.text = "Score: " + score;
+        timeText.text = "Time: " + timer;
 
         gameOverPanel.SetActive(timer > TargetShooter.desiredTime);
     }
@@ -38,7 +38,8 @@ public class Statistics : MonoBehaviour
 
     public void Restart()
     {
-        Statistics.timer = 0f;
+        timer = 0f;
+        score = 0;
         string sceneName = SceneManager.GetActiveScene().name;
 
         SceneManager.LoadScene(sceneName);

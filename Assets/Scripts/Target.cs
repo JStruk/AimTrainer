@@ -19,6 +19,6 @@ public class Target : MonoBehaviour
     public void Hit()
     {
         transform.position = TargetBounds.Instance.GetRandomPosition();
-        Statistics.scoreInt += 1;
+        Statistics.score += 1;
     }
 }
